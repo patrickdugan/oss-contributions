@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spiral OSS contributions</title>
+<style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a64; --line:#e3e0d8; --head:#efece4; --ok:#1f7a4d; --warn:#9a6700; --bad:#a33a2a; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#171715; --fg:#eceae4; --muted:#9c9a92; --line:#33322e; --head:#22221f; --ok:#5fd29a; --warn:#e8b64a; --bad:#f08a7a; }
+}
+:root[data-theme="dark"] { --bg:#171715; --fg:#eceae4; --muted:#9c9a92; --line:#33322e; --head:#22221f; --ok:#5fd29a; --warn:#e8b64a; --bad:#f08a7a; }
+body { margin:0; padding:24px 16px; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, sans-serif; }
+main { max-width:1100px; margin:0 auto; }
+h1 { font-size:22px; margin:0 0 4px; }
+h2 { font-size:17px; margin:28px 0 8px; }
+p.meta { color:var(--muted); margin:0 0 12px; font-size:13px; }
+.wrap { overflow-x:auto; border:1px solid var(--line); border-radius:6px; }
+table { border-collapse:collapse; width:100%; min-width:640px; }
+th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { background:var(--head); font-weight:600; font-size:13px; }
+td.status { white-space:nowrap; font-weight:600; }
+.ok { color:var(--ok); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+<h1>Spiral OSS contributions</h1>
+<p class="meta">Public upstream PRs, issues and comments, status as of 2026-10-14. Checked against the GitHub API.</p>
+
+<div class="wrap"><table>
+<tr><th>Project</th><th>Item</th><th>Status</th><th>Notes</th></tr>
+<tr><td>Arke (gbks/arke)</td><td><a href="https://github.com/GBKS/arke/pull/8">PR #8, Harden parsing of untrusted input</a></td><td class="status ok">Merged 2026-10-07</td><td>Six commits, merged by the maintainer. Covers parsing-trap fixes.</td></tr>
+<tr><td>Lygos Finance (LygosLabs/dlc-verify-tvc)</td><td><a href="https://github.com/LygosLabs/dlc-verify-tvc/pull/4">PR #4</a>, Unix-time locktimes and min confirmations in the enclave</td><td class="status ok">Merged 2026-10-09</td><td>The maintainer applied the patches and opened the PR.</td></tr>
+<tr><td>Lygos Finance (LygosLabs/dlc-verify)</td><td><a href="https://github.com/LygosLabs/dlc-verify/pull/10">PR #10</a>, bind verdict to signed oracle event, honour contract flags, check locktimes, validate attestations</td><td class="status warn">Open</td><td>Same disclosure path as the tvc PR.</td></tr>
+<tr><td>NestedMuSig2 BIP (bitcoin/bips)</td><td><a href="https://github.com/bitcoin/bips/pull/2297#issuecomment-6080348889">Review comment on PR #2297</a></td><td class="status ok">Posted 2026-10-09</td><td>Links the findings page on patrickdugan/bips. The BIP PR itself is still open.</td></tr>
+<tr><td>Programming Lightning (Beige-Coffee/pl-website)</td><td><a href="https://github.com/Beige-Coffee/pl-website/issues/5">Issue #5</a>, private channel request</td><td class="status warn">Open</td><td>Heads-up only, no technical details. Full report waits for a private channel from the maintainer.</td></tr>
+<tr><td>Bark (ark-bitcoin/bark)</td><td><a href="https://github.com/ark-bitcoin/bark/pull/36">PR #36</a>, versioned Cairo claims for pubkey VTXO exits</td><td class="status warn">Open</td><td>Last updated 2026-09-20.</td></tr>
+<tr><td>Shinigami (starkware-bitcoin/shinigami)</td><td><a href="https://github.com/starkware-bitcoin/shinigami/pull/298">PR #298</a>, STWO-compatible software SHA-256</td><td class="status warn">Open</td><td>No activity since 2026-07-14.</td></tr>
+<tr><td>param-decomp (goodfire-ai)</td><td><a href="https://github.com/goodfire-ai/param-decomp/pull/483">PR #483</a>, Rust accel scoring</td><td class="status bad">Closed, not merged</td><td>Closed 2026-05-12.</td></tr>
+</table></div>
+</main>
+</body>
+</html>
